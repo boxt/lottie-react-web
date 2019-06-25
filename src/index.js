@@ -138,6 +138,7 @@ export default class Lottie extends React.Component {
       ariaRole,
       ariaLabel,
       title,
+      className,
     } = this.props;
 
     const getSize = (initial) => {
@@ -168,6 +169,7 @@ export default class Lottie extends React.Component {
         ref={(c) => {
           this.el = c;
         }}
+        className={className}
         style={lottieStyles}
         title={title}
         role={ariaRole}
@@ -193,6 +195,7 @@ Lottie.propTypes = {
   ariaLabel: PropTypes.string,
   title: PropTypes.string,
   style: PropTypes.string,
+  className: PropTypes.string,
 };
 
 Lottie.defaultProps = {
@@ -203,4 +206,5 @@ Lottie.defaultProps = {
   ariaRole: 'button',
   ariaLabel: 'animation',
   title: '',
+  className: '',
 };
